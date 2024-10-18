@@ -1,7 +1,14 @@
+def next?
+  File.basename(__FILE__) == "Gemfile.next"
+end
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.2.1", ">= 7.2.1.1"
+if next?
+  gem "rails", ">= 8.0.0.beta1"
+else
+  gem "rails", "~> 7.2.1", ">= 7.2.1.1"
+end
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use sqlite3 as the database for Active Record
@@ -59,3 +66,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "rspec-rails", "~> 7.0"
+
+gem "next_rails", "~> 1.4"
