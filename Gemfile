@@ -5,9 +5,9 @@ source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 if next?
-  gem "rails", ">= 8.0.0.beta1"
+  gem "rails", "~> 7.2.1"
 else
-  gem "rails", "~> 7.2.1", ">= 7.2.1.1"
+  gem "rails", "~> 7.2.1"
 end
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
